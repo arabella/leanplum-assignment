@@ -26,7 +26,7 @@ public class DriverManager {
 
     public void createDriver(URL url, String udid, String systemPort, String deviceName) {
         try {
-            DesiredCapabilities cap = new DesiredCapabilities();
+            DesiredCapabilities cap = getCapabilities();
             cap.setCapability("platformName", "Android");
             cap.setCapability("udid", udid);
             cap.setCapability("deviceName", deviceName);

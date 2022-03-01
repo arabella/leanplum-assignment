@@ -3,8 +3,6 @@ package core;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.util.Arrays;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.apache.commons.io.FileUtils;
@@ -20,7 +18,6 @@ public class LogResults {
     public boolean testStatus;
     private final @Nonnull AppiumDriver<?> driver;
     private final @Nullable String deviceSettings;
-    private @Nullable int[] test_ids = null;
     private @Nonnull String stackTraceString = "";
     private @Nonnull String stepName = "";
     private static final File TEST_OUTPUT_DIR = new File("test-output/");
@@ -48,17 +45,13 @@ public class LogResults {
     // Login reports
     public void startTest(@Nonnull String description) {
         Reporter.log(String.format(
-                "<h2><font color='DarkBlue'>Tests: %s | Device:[%s] </font>Description:[%s]</h2>"
+                "<h2><font color='DarkBlue'>Device:[%s] </font>Description:[%s]</h2>"
                 + " - test started at: [%s]",
-                Arrays.toString(test_ids),
                 deviceSettings,
                 description,
                 new Timestamp(System.currentTimeMillis())));
         Reporter.log("<ol type='1'>");
         testStatus = true;
-        if (test_ids != null) {
-            this.test_ids = test_ids;
-        }
     }
 
     public void assertStep(@Nonnull String step) {
@@ -67,10 +60,6 @@ public class LogResults {
     }
 
     public void endTest() {
-
-        if (test_ids != null) {
-            assert deviceSettings != null;
-        }
 
         Reporter.log("</ol>");
     }
@@ -87,6 +76,7 @@ public class LogResults {
         final String testStep =
                 getWhoIsCallingMe(getClass().getName() + "." + "endStep").toString()
                 + stepName;
+
         String relativePath = SCREENSHOT + testStep;
 
         if (condition) {

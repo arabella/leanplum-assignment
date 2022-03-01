@@ -10,7 +10,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class AppPicker extends MobilePage {
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text, 'Lina qa'")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Lina qa']")
     @iOSXCUITFindBy(accessibility = "")
     private MobileElement appName;
 

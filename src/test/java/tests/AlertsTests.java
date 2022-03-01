@@ -27,6 +27,7 @@ public class AlertsTests extends TestManager {
             throw e;
         } finally {
             rondo.log.endStep();
+            driver.quit();
         }
     }
 }

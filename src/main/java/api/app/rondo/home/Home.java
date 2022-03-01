@@ -53,8 +53,6 @@ public class Home extends MobilePage {
     }
 
     public boolean isUserIdEmpty() {
-        System.out.println("UserId: " + userID.getText());
-        System.out.println(userID.getText() == null || userID.getText().isEmpty());
         return userID.getText() == null || userID.getText().isEmpty();
     }
 

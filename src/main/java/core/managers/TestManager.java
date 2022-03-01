@@ -85,7 +85,6 @@ public class TestManager {
 
     @AfterClass
     public static void afterAll() {
-        client.killDriver();
         server.stop();
     }
 

@@ -43,10 +43,6 @@ public class Settings {
         return properties.getProperty("udid");
     }
 
-    public String getAvdName() {
-        return properties.getProperty("avdName");
-    }
-
     public String getAppPath() {
         String appPath = properties.getProperty("appPath");
         if (appPath != null && !appPath.toLowerCase().contains("http")) {

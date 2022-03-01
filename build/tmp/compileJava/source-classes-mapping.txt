@@ -1,39 +1,33 @@
 core/ADB.java
  core.ADB
-core/UISelector.java
- core.UISelector
 core/LogResults.java
  core.LogResults
+utils/Network.java
+ utils.Network
 api/app/rondo/navigation/Navigation.java
  api.app.rondo.navigation.Navigation
 settings/Settings.java
  settings.Settings
-core/UIObject.java
- core.UIObject
+api/app/rondo/home/Home.java
+ api.app.rondo.home.Home
 core/MobilePage.java
  core.MobilePage
-core/Timer.java
- core.Timer
-api/app/rondo/navigation/NavigationUIObjects.java
- api.app.rondo.navigation.NavigationUIObjects
 factory/RondoObjectFactory.java
  factory.RondoObjectFactory
-core/constants/Credentials.java
- core.constants.Credentials
 core/managers/ServerManager.java
  core.managers.ServerManager
 api/interfaces/Application.java
- api.Interfaces.Application
-api/interfaces/Activity.java
- api.Interfaces.Activity
+ api.interfaces.Application
 api/app/rondo/alert/Alert.java
  api.app.rondo.alert.Alert
+api/app/rondo/nativeActions/NativeActions.java
+ api.app.rondo.nativeActions.NativeActions
 api/app/rondo/adHoc/AdHoc.java
  api.app.rondo.adHoc.AdHoc
 core/managers/DriverManager.java
  core.managers.DriverManager
-api/app/rondo/adHoc/AdHocUIObjects.java
- api.app.rondo.adHoc.AdHocUIObjects
+api/app/rondo/appPicker/AppPicker.java
+ api.app.rondo.appPicker.AppPicker
 core/managers/TestManager.java
  core.managers.TestManager
 api/app/rondo/Rondo.java

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-rondo-android">
-              <span class="suite-name border-passed">rondo-android</span>
+              <span class="suite-name border-failed">rondo-android</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-rondo-android">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-rondo-android" class="hide-methods failed suite-rondo-android"> (hide)</a> <!-- hide-methods failed suite-rondo-android -->
+                      <a href="#" panel-name="suite-rondo-android" class="show-methods failed suite-rondo-android"> (show)</a> <!-- show-methods failed suite-rondo-android -->
+                    </span>
+                    <div class="method-list-content failed suite-rondo-android">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-rondo-android" title="tests.AdHocScreenTests" hash-for-method="testStartCampaign(753d52c2, 4555, mi11lite)">testStartCampaign(753d52c2, 4555, mi11lite)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-rondo-android -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -103,10 +117,38 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-rondo-android" class="panel rondo-android">
+          <div class="suite-rondo-android-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.AdHocScreenTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testStartCampaign(753d52c2, 4555, mi11lite)">
+                  </a> <!-- testStartCampaign(753d52c2, 4555, mi11lite) -->
+                  <span class="method-name">testStartCampaign</span>
+                  <span class="parameters">(753d52c2, 4555, mi11lite)</span>
+                  <div class="stack-trace">java.util.MissingFormatArgumentException: Format specifier &apos;%s&apos;
+	at java.util.Formatter.format(Formatter.java:2519)
+	at java.util.Formatter.format(Formatter.java:2455)
+	at java.lang.String.format(String.java:2940)
+	at core.LogResults.startTest(LogResults.java:47)
+	at tests.AdHocScreenTests.testStartCampaign(AdHocScreenTests.java:27)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-rondo-android-class-failed -->
         </div> <!-- panel rondo-android -->
         <div panel-name="test-xml-rondo-android" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/linaivanova/Desktop/lp/suites/android/lina.xml</span>
+            <span class="header-content">/Users/linaivanova/lp/src/test/suites/android/lina.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -116,15 +158,15 @@
   &lt;parameter name=&quot;port&quot; value=&quot;4555&quot;/&gt;
   &lt;parameter name=&quot;udid&quot; value=&quot;753d52c2&quot;/&gt;
   &lt;parameter name=&quot;deviceName&quot; value=&quot;mi11lite&quot;/&gt;
-  &lt;test thread-count=&quot;10&quot; name=&quot;Navigation&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;10&quot; name=&quot;Alert&quot; parallel=&quot;tests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.NavigationTests&quot;&gt;
+      &lt;class name=&quot;tests.AdHocScreenTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;test1&quot;/&gt;
+          &lt;include name=&quot;testStartCampaign&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- tests.NavigationTests --&gt;
+      &lt;/class&gt; &lt;!-- tests.AdHocScreenTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Navigation --&gt;
+  &lt;/test&gt; &lt;!-- Alert --&gt;
 &lt;/suite&gt; &lt;!-- rondo-android --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +178,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Navigation (1 class)</span>
+                <span class="test-name">Alert (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,6 +188,14 @@
             <span class="header-content">Groups for rondo-android</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">adhoc</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testStartCampaign</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-rondo-android" class="panel">
@@ -162,11 +212,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testStartCampaign')
+data.setCell(0, 2, 'tests.AdHocScreenTests')
+data.setCell(0, 3, 156);
 window.suiteTableData['rondo-android']= { tableData: data, tableDiv: 'times-div-rondo-android'}
 return data;
 }
               </script>
+              <span class="suite-total-time">Total running time: 156 ms</span>
               <div id="times-div-rondo-android">
               </div> <!-- times-div-rondo-android -->
             </div> <!-- times-div -->
@@ -191,6 +246,30 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.AdHocScreenTests</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeAll(753d52c2, 4555, mi11lite)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">initTestContext(mi11lite, public void tests.AdHocScreenTests.testStartCampaign(java.lang.String,java.lang.String,jav...)</span>
+                <span class="method-start">11526 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testStartCampaign(753d52c2, 4555, mi11lite)</span>
+                <span class="method-start">11526 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">printException([TestResult name=testStartCampaign status=FAILURE method=AdHocScreenTests.testStartCampaign(java.lan...)</span>
+                <span class="method-start">11685 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterAll</span>
+                <span class="method-start">11686 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

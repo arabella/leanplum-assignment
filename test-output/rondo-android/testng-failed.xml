@@ -4,17 +4,17 @@
   <parameter name="port" value="4555"/>
   <parameter name="udid" value="753d52c2"/>
   <parameter name="deviceName" value="mi11lite"/>
-  <test thread-count="10" name="Navigation(failed)" parallel="tests">
+  <test thread-count="10" name="Alert(failed)" parallel="tests">
     <classes>
-      <class name="tests.Alert">
+      <class name="tests.AdHocScreenTests">
         <methods>
           <include name="afterAll"/>
           <include name="beforeAll"/>
           <include name="printException"/>
-          <include name="test1" invocation-numbers="0"/>
+          <include name="testStartCampaign" invocation-numbers="0"/>
           <include name="initTestContext"/>
         </methods>
-      </class> <!-- tests.Alert -->
+      </class> <!-- tests.AdHocScreenTests -->
     </classes>
-  </test> <!-- Navigation(failed) -->
+  </test> <!-- Alert(failed) -->
 </suite> <!-- Failed suite [rondo-android] -->

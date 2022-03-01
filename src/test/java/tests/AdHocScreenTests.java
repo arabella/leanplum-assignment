@@ -1,6 +1,5 @@
 package tests;
 
-import api.app.rondo.Rondo;
 import core.managers.TestManager;
 import factory.RondoObjectFactory;
 import org.testng.annotations.Parameters;
@@ -56,6 +55,7 @@ public class AdHocScreenTests extends TestManager {
             throw e;
         } finally {
             rondo.log.endStep();
+            driver.quit();
         }
     }
 
