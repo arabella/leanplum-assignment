@@ -1,0 +1,6 @@
+tests/Alert.java
+ tests.Alert
+tests/AdHocScreenTests.java
+ tests.AdHocScreenTests
+tests/Navigation.java
+ tests.Navigation
