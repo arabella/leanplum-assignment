@@ -8,3 +8,5 @@ Setup:
 3. you can run the test by 
   - right clicking the xml file or
   - run gradle --no-build-cache test  -PsuiteFile=lina.xml
+4. for the moment you will need to hardcode your leanplum app name in 
+AppPicker.java line#13 replace "Lina qa" with your app display name
